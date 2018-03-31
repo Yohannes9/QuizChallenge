@@ -20,6 +20,7 @@ public class QuestionOne extends AppCompatActivity {
         setContentView(R.layout.activity_question_one);
         ProgressBar progressBar = findViewById(R.id.progressBar);
         progressBar.setProgress(20);
+        //Hey
 
         container = findViewById(R.id.container);
         anim = (AnimationDrawable) container.getBackground();
