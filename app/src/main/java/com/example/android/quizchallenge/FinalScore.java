@@ -9,7 +9,7 @@ import android.widget.TextView;
 public class FinalScore extends AppCompatActivity {
     AnimationDrawable anim;
     ConstraintLayout container;
-    int scorefinal = getIntent().getExtras().getInt("score");
+    int scoreFinal = getIntent().getExtras().getInt("score5");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,6 @@ public class FinalScore extends AppCompatActivity {
         anim.start();
 
         TextView score = findViewById(R.id.textView);
-        score.setText(scorefinal+"/5");
+        score.setText(scoreFinal+"/5");
     }
 }

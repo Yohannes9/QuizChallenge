@@ -37,7 +37,7 @@ public class QuestionOne extends AppCompatActivity {
     public void optionTwo(View view){
         score = score + 1;
         Intent myIntent = new Intent(QuestionOne.this, QuestionTwo.class);
-        myIntent.putExtra("score", score);
+        myIntent.putExtra("score1", score);
         QuestionOne.this.startActivity(myIntent);
         this.finish();
     }

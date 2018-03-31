@@ -14,7 +14,7 @@ public class QuestionTwo extends AppCompatActivity {
 
     AnimationDrawable anim;
     ConstraintLayout container;
-    int score = getIntent().getExtras().getInt("score");
+    int score2 = getIntent().getExtras().getInt("score1");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,30 +43,27 @@ public class QuestionTwo extends AppCompatActivity {
     }
 
     public void optionOne(View view){
-        score = score + 0;
         Intent myIntent = new Intent(QuestionTwo.this, QuestionThree.class);
-        myIntent.putExtra("score", score);
+        myIntent.putExtra("score", score2);
         QuestionTwo.this.startActivity(myIntent);
         this.finish();
     }
     public void optionTwo(View view){
-        score = score + 0;
         Intent myIntent = new Intent(QuestionTwo.this, QuestionThree.class);
-        myIntent.putExtra("score", score);
+        myIntent.putExtra("score", score2);
         QuestionTwo.this.startActivity(myIntent);
         this.finish();
     }
     public void optionThree(View view){
-        score = score + 0;
         Intent myIntent = new Intent(QuestionTwo.this, QuestionThree.class);
-        myIntent.putExtra("score", score);
+        myIntent.putExtra("score", score2);
         QuestionTwo.this.startActivity(myIntent);
         this.finish();
     }
     public void optionFour(View view){
-        score = score + 1;
+        score2 = score2 + 1;
         Intent myIntent = new Intent(QuestionTwo.this, QuestionThree.class);
-        myIntent.putExtra("score", score);
+        myIntent.putExtra("score", score2);
         QuestionTwo.this.startActivity(myIntent);
         this.finish();
     }
