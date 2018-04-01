@@ -14,7 +14,7 @@ public class QuestionFive extends AppCompatActivity {
 
     AnimationDrawable anim;
     ConstraintLayout container;
-    int score5 = getIntent().getExtras().getInt("score4");
+    int score5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,11 +24,18 @@ public class QuestionFive extends AppCompatActivity {
         ProgressBar progressBar = findViewById(R.id.progressBar);
         progressBar.setProgress(100);
 
+
         container = findViewById(R.id.container);
         anim = (AnimationDrawable) container.getBackground();
         anim.setEnterFadeDuration(4500);
         anim.setExitFadeDuration(4500);
         anim.start();
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            score5 = extras.getInt("score4",0);
+            //The key argument here must match that used in the other activity
+        }
 
         TextView question = findViewById(R.id.question);
         question.setText("Question 5 \n What is the largest coffee growing country in the world?");

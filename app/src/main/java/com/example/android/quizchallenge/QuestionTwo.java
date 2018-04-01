@@ -14,7 +14,7 @@ public class QuestionTwo extends AppCompatActivity {
 
     AnimationDrawable anim;
     ConstraintLayout container;
-    int score2 = getIntent().getExtras().getInt("score1");
+    int score2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,12 @@ public class QuestionTwo extends AppCompatActivity {
         setContentView(R.layout.activity_question_one);
         ProgressBar progressBar = findViewById(R.id.progressBar);
         progressBar.setProgress(40);
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            score2 = extras.getInt("score1",2);
+            //The key argument here must match that used in the other activity
+        }
 
         container = findViewById(R.id.container);
         anim = (AnimationDrawable) container.getBackground();

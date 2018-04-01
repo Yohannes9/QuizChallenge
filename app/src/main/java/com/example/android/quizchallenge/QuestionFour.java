@@ -14,7 +14,7 @@ public class QuestionFour extends AppCompatActivity {
 
     AnimationDrawable anim;
     ConstraintLayout container;
-    int score4 = getIntent().getExtras().getInt("score3");
+    int score4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +29,12 @@ public class QuestionFour extends AppCompatActivity {
         anim.setEnterFadeDuration(4500);
         anim.setExitFadeDuration(4500);
         anim.start();
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            score4 = extras.getInt("score3",0);
+            //The key argument here must match that used in the other activity
+        }
 
         TextView question = findViewById(R.id.question);
         question.setText("Question 4 \n What is the highest mountain in the world?");
