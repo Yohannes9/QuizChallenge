@@ -49,25 +49,19 @@ public class QuestionFour extends AppCompatActivity {
     }
 
     public void optionOne(View view){
-        Intent myIntent = new Intent(QuestionFour.this, QuestionFive.class);
-        myIntent.putExtra("score", score4);
-        QuestionFour.this.startActivity(myIntent);
-        this.finish();
+       beginActivity(score4);
     }
     public void optionTwo(View view){
-        score4 = score4 +1;
-        Intent myIntent = new Intent(QuestionFour.this, QuestionFive.class);
-        myIntent.putExtra("score", score4);
-        QuestionFour.this.startActivity(myIntent);
-        this.finish();
+        score4 += 1;
+        beginActivity(score4);
     }
     public void optionThree(View view){
-        Intent myIntent = new Intent(QuestionFour.this, QuestionFive.class);
-        myIntent.putExtra("score", score4);
-        QuestionFour.this.startActivity(myIntent);
-        this.finish();
+        beginActivity(score4);
     }
     public void optionFour(View view){
+        beginActivity(score4);
+    }
+    public void beginActivity(int score4){
         Intent myIntent = new Intent(QuestionFour.this, QuestionFive.class);
         myIntent.putExtra("score", score4);
         QuestionFour.this.startActivity(myIntent);

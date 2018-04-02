@@ -50,25 +50,20 @@ public class QuestionFive extends AppCompatActivity {
     }
 
     public void optionOne(View view){
-        Intent myIntent = new Intent(QuestionFive.this, FinalScore.class);
-        myIntent.putExtra("score", score5);
-        QuestionFive.this.startActivity(myIntent);
-        this.finish();
+        beginActivity(score5);
     }
     public void optionTwo(View view){
-        Intent myIntent = new Intent(QuestionFive.this, FinalScore.class);
-        myIntent.putExtra("score", score5);
-        QuestionFive.this.startActivity(myIntent);
-        this.finish();
+        beginActivity(score5);
     }
     public void optionThree(View view){
         score5 = score5 + 1;
-        Intent myIntent = new Intent(QuestionFive.this, FinalScore.class);
-        myIntent.putExtra("score", score5);
-        QuestionFive.this.startActivity(myIntent);
-        this.finish();
+        beginActivity(score5);
     }
     public void optionFour(View view){
+        beginActivity(score5);
+    }
+
+    public void beginActivity(int score5){
         Intent myIntent = new Intent(QuestionFive.this, FinalScore.class);
         myIntent.putExtra("score", score5);
         QuestionFive.this.startActivity(myIntent);
