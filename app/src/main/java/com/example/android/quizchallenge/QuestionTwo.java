@@ -24,11 +24,13 @@ public class QuestionTwo extends AppCompatActivity {
         ProgressBar progressBar = findViewById(R.id.progressBar);
         progressBar.setProgress(40);
 
-        Bundle extras = getIntent().getExtras();
+        /*Bundle extras = getIntent().getExtras();
         if (extras != null) {
             score2 = extras.getInt("score1",2);
             //The key argument here must match that used in the other activity
-        }
+        }*/
+
+        score2 = score.calscore;
 
         container = findViewById(R.id.container);
         anim = (AnimationDrawable) container.getBackground();
@@ -58,12 +60,11 @@ public class QuestionTwo extends AppCompatActivity {
         beginActivity(score2);
     }
     public void optionFour(View view){
-        score2 = score2 + 1;
         beginActivity(score2);
     }
     public void beginActivity(int score2){
         Intent myIntent = new Intent(QuestionTwo.this, QuestionThree.class);
-        myIntent.putExtra("score", score2);
+        score.calscore = score2;
         QuestionTwo.this.startActivity(myIntent);
         this.finish();
     }

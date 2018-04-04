@@ -46,6 +46,7 @@
         android:background="@drawable/circle"
         android:text="Restart"
         android:textAllCaps="true"
+        android:onClick="Reset"
         android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"

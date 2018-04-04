@@ -30,11 +30,7 @@ public class QuestionFour extends AppCompatActivity {
         anim.setExitFadeDuration(4500);
         anim.start();
 
-        Bundle extras = getIntent().getExtras();
-        if (extras != null) {
-            score4 = extras.getInt("score3",0);
-            //The key argument here must match that used in the other activity
-        }
+        score4 = score.calscore;
 
         TextView question = findViewById(R.id.question);
         question.setText("Question 4 \n What is the highest mountain in the world?");
@@ -63,7 +59,7 @@ public class QuestionFour extends AppCompatActivity {
     }
     public void beginActivity(int score4){
         Intent myIntent = new Intent(QuestionFour.this, QuestionFive.class);
-        myIntent.putExtra("score", score4);
+        score.calscore = score4;
         QuestionFour.this.startActivity(myIntent);
         this.finish();
     }

@@ -29,25 +29,21 @@ public class QuestionOne extends AppCompatActivity {
     }
 
     public void optionOne(View view){
-        score = 0;
         beginActivity(score);
     }
     public void optionTwo(View view){
-        score += 1;
         beginActivity(score);
     }
     public void optionThree(View view){
-        score = 0;
         beginActivity(score);
     }
     public void optionFour(View view){
-        score = 0;
         beginActivity(score);
     }
     public void beginActivity(int score){
         Intent myIntent = new Intent(QuestionOne.this, QuestionTwo.class);
-        myIntent.putExtra("score", score);
+        com.example.android.quizchallenge.score.calscore = score;
         QuestionOne.this.startActivity(myIntent);
-        //this.finish();
+        this.finish();
     }
 }
